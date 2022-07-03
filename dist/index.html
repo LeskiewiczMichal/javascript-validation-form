@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS-validation-form</title>
-</head>
-<body>
-    <script src="../src/index.js"></script>
-</body>
+  </head>
+  <body>
+    <form novalidate id="form">
+      <div class="input-wrapper">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required />
+        <span class="error" aria-live="polite"></span>
+      </div>
+      <div class="input-wrapper">
+        <label for="country">Country:</label>
+        <input type="text" name="country" id="country" minlength="3" required />
+        <span class="error" aria-live="polite"></span>
+      </div>
+      <div class="input-wrapper">
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          minlength="6"
+          required
+        />
+        <span class="error" aria-live="polite"></span>
+      </div>
+      <div class="input-wrapper">
+        <label for="password-confirmation">Confirm Passowrd:</label>
+        <input
+          type="password"
+          name="password-confirmation"
+          id="password-confirmation"
+          minlength="6"
+          required
+        />
+        <span class="error" aria-live="polite"></span>
+      </div>
+      <button type="submit" id="confirm-button">Confirm</button>
+    </form>
+    <script src="main.js"></script>
+  </body>
 </html>

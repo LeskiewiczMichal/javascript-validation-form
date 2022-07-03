@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  border: 2px solid rgb(198, 175, 91);
+  height: 400px;
+  width: 400px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+input[type="email"] {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+}
+
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+#confirm-button {
+  padding: 0.5rem;
+  border: none;
+  box-shadow: 0 0 5px rgba(86, 83, 83, 0.7);
+  cursor: pointer;
+  background-color: rgb(203, 197, 197);
+  width: fit-content;
+  align-self: end;
+}
+
+#confirm-button:hover {
+  background-color: rgb(126, 123, 123);
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+}
+
+.error.active {
+  padding: 0.3rem;
+}
+
+input.invalid {
+  border-color: #900;
+  background-color: #fdd;
+}
